@@ -1,23 +1,27 @@
-## Why
+## Зачем
 
-<!-- Explain the motivation for this change. What problem does this solve? Why now? -->
+<!-- Объясните мотивацию этого изменения. Какую проблему решаем? Почему сейчас? -->
 
-## What Changes
+## Что меняется
 
-<!-- Describe what will change. Be specific about new capabilities, modifications, or removals. -->
+<!-- Опишите, что именно изменится. Укажите конкретные новые возможности, модификации или удаления. -->
 
-## Capabilities
+## Возможности
 
-### New Capabilities
-<!-- Capabilities being introduced. Replace <name> with kebab-case identifier (e.g., user-auth, data-export, api-rate-limiting). Each creates specs/<name>/spec.md -->
-- `<name>`: <brief description of what this capability covers>
+### Новые возможности
 
-### Modified Capabilities
-<!-- Existing capabilities whose REQUIREMENTS are changing (not just implementation).
-     Only list here if spec-level behavior changes. Each needs a delta spec file.
-     Use existing spec names from openspec/specs/. Leave empty if no requirement changes. -->
-- `<existing-name>`: <what requirement is changing>
+<!-- Вводимые возможности. Замените <name> на идентификатор в стиле kebab-case (например, user-auth, data-export, api-rate-limiting). Для каждой создаётся файл specs/<name>/spec.md -->
 
-## Impact
+- `<name>`: <краткое описание того, что охватывает эта возможность>
 
-<!-- Affected code, APIs, dependencies, systems -->
+### Изменённые возможности
+
+<!-- Существующие возможности, у которых меняются ТРЕБОВАНИЯ (а не только реализация).
+     Указывайте только те, где меняется поведение на уровне спецификации. Для каждой нужен файл дельта-спецификации.
+     Используйте существующие имена спецификаций из openspec/specs/. Если изменений требований нет, оставьте пустым. -->
+
+- `<existing-name>`: <какое требование меняется>
+
+## Влияние
+
+<!-- Затрагиваемые возможности -->
