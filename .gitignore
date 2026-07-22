@@ -1,2 +1,11 @@
 # mac os related files
 **/.DS_Store
+
+# working repos
+repos/**
+
+# graph
+graph/**
+
+# git
+.gitmodules
