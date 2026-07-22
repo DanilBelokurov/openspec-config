@@ -45,69 +45,48 @@ artifacts:
       This is the foundation - specs, design, adr, and tasks all build on this.
     requires: []
   - id: specs
-    generates: specs/**/*.md
+    generates: specs/**/**/*.md
     description: Detailed specifications for the change
     template: spec.md
     instruction: >
       Create specification files that define WHAT the system should do.
 
+      Create one spec file per capability listed in the proposal's Capabilities section.
 
-      Create one spec file per capability listed in the proposal's Capabilities
-      section.
+      - **New capabilities**: place the spec file at `specs/<domain>/<capability>/spec.md`,
+        where `<domain>` is the functional domain of the capability (e.g., `metrics`, `auth`, `storage`).
+        Determine the domain from the proposal context, the capability name (first kebab-case segment before the first hyphen), or use `core` if no clear domain exists.
+        Example: for a capability named `cpu-usage-collector` that belongs to metrics, the path would be `specs/metrics/cpu-usage-collector/spec.md`.
 
-      - New capabilities: use the exact kebab-case name from the proposal
-      (specs/<capability>/spec.md).
-
-      - Modified capabilities: use the existing spec folder name from
-      openspec/specs/<capability>/ when creating the delta spec at
-      specs/<capability>/spec.md.
-
+      - **Modified capabilities**: use the existing spec folder path from `openspec/specs/` as the base.
+        Create the delta spec at `specs/<relative-path>/spec.md`, where `<relative-path>` is the path relative to `openspec/specs/`.
+        Example: if the existing spec is at `openspec/specs/metrics/cpu-usage/spec.md`, the delta spec must be placed at `specs/metrics/cpu-usage/spec.md`.
+        If the existing spec does not follow a domain structure (e.g., `openspec/specs/export/spec.md`), keep the same relative path under `specs/` (i.e., `specs/export/spec.md`).
 
       Delta operations (use ## headers):
 
       - **ADDED Requirements**: New capabilities
-
-      - **MODIFIED Requirements**: Changed behavior - MUST include full updated
-      content
-
-      - **REMOVED Requirements**: Deprecated features - MUST include **Reason**
-      and **Migration**
-
+      - **MODIFIED Requirements**: Changed behavior - MUST include full updated content
+      - **REMOVED Requirements**: Deprecated features - MUST include **Reason** and **Migration**
       - **RENAMED Requirements**: Name changes only - use FROM:/TO: format
-
 
       Format requirements:
 
       - Each requirement: `### Requirement: <name>` followed by description
-
       - Use SHALL/MUST for normative requirements (avoid should/may)
-
       - Each scenario: `#### Scenario: <name>` with WHEN/THEN format
-
-      - **CRITICAL**: Scenarios MUST use exactly 4 hashtags (`####`). Using 3
-      hashtags or bullets will fail silently.
-
+      - **CRITICAL**: Scenarios MUST use exactly 4 hashtags (`####`). Using 3 hashtags or bullets will fail silently.
       - Every requirement MUST have at least one scenario.
-
 
       MODIFIED requirements workflow:
 
-      1. Locate the existing requirement in openspec/specs/<capability>/spec.md
+      1. Locate the existing requirement in `openspec/specs/<relative-path>/spec.md` (using the same relative path determined for the delta).
+      2. Copy the ENTIRE requirement block (from `### Requirement:` through all scenarios).
+      3. Paste under `## MODIFIED Requirements` and edit to reflect new behavior.
+      4. Ensure header text matches exactly (whitespace-insensitive).
 
-      2. Copy the ENTIRE requirement block (from `### Requirement:` through all
-      scenarios)
-
-      3. Paste under `## MODIFIED Requirements` and edit to reflect new behavior
-
-      4. Ensure header text matches exactly (whitespace-insensitive)
-
-
-      Common pitfall: Using MODIFIED with partial content loses detail at
-      archive time.
-
-      If adding new concerns without changing existing behavior, use ADDED
-      instead.
-
+      Common pitfall: Using MODIFIED with partial content loses detail at archive time.
+      If adding new concerns without changing existing behavior, use ADDED instead.
 
       Example:
 
@@ -136,9 +115,7 @@ artifacts:
       **Reason**: Replaced by new export system
 
       **Migration**: Use new export endpoint at /api/v2/export
-
       ```
-
 
       Specs should be testable - each scenario is a potential test case.
     requires:
