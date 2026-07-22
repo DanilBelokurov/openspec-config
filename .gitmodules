@@ -1,0 +1,3 @@
+[submodule "repos/spring-school"]
+	path = repos/spring-school
+	url = https://github.com/pchurzin/spring-school.git
