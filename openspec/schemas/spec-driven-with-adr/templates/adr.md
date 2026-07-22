@@ -1,29 +1,29 @@
-# ADR Review Manifest
+# Манифест проверки ADR
 
-## ADR Review Completed
+## Проверка ADR завершена
 
-- Date: YYYY-MM-DD
-- Reviewer:
-- Change:
+- Дата: ГГГГ-ММ-ДД
+- Проверяющий:
+- Изменение:
 
-## In-Force ADR Context Reviewed
+## Проверен контекст действующих ADR
 
-<!-- List currently in-force repository-level ADRs reviewed before completing this change.
-Use `- adr/NNNN-kebab-title.md - short relevance note`.
-If none exist, write `- None: no existing repository-level ADRs were present.` -->
-
--
-
-## Repository-Level ADRs Created
-
-<!-- Reference every durable ADR created for this change.
-Use `- adr/NNNN-kebab-title.md - decision summary`.
-Do not duplicate the ADR's Context, Decision, or Consequences sections here.
-If no durable ADR was needed, write:
-`- None: no major durable architectural decisions were introduced by this change.` -->
+<!-- Перечислите действующие на уровне репозитория ADR, проверенные перед выполнением этого изменения.
+Используйте `- openspec/adr/NNNN-kebab-title.md - краткая заметка о релевантности`.
+Если их нет, напишите `- Нет: существующих ADR на уровне репозитория не было`. -->
 
 -
 
-## Notes
+## Созданные ADR на уровне репозитория
 
-<!-- Optional concise review notes. Keep durable decision details in repository-level ADR files. -->
+<!-- Укажите все долгосрочные ADR, созданные для этого изменения.
+Используйте `- openspec/adr/NNNN-kebab-title.md - краткое описание решения`.
+Не дублируйте здесь разделы ADR: Контекст, Решение или Последствия.
+Если долгосрочный ADR не требовался, напишите:
+`- Нет: это изменение не внесло значимых долгосрочных архитектурных решений`. -->
+
+-
+
+## Заметки
+
+<!-- Необязательные краткие заметки по проверке. Долгосрочные детали решений храните в файлах ADR на уровне репозитория. -->
