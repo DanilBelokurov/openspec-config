@@ -164,6 +164,7 @@ artifacts:
       superseding ADR.
 
       Existing code patterns:
+      
       Before writing code examples, check existing code patterns from code-graph.
       Graphs located in <repo>/graph/<service-name>.
       You can know service name by reading context files.
