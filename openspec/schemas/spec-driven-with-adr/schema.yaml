@@ -127,8 +127,7 @@ artifacts:
     instruction: >
       Create the design document that explains HOW to implement the change.
 
-
-      When to include design.md (create only if any apply):
+      Always include design.md (especially if any apply):
 
       - Cross-cutting change (multiple services/modules) or new architectural
       pattern
@@ -139,6 +138,18 @@ artifacts:
 
       - Ambiguity that benefits from technical decisions before coding
 
+      Before writing double check project context from `openspec/context` folder.
+      Every techincal decision must be coherent with the in-force set of ADRs and match the existing code patterns (see below).
+
+      Project context (read existing context files first):
+
+      Project context files are in <repo>/openspec/context/.
+      They describe the current state of the system, including architecture, dependencies, and constraints.
+      Read them before writing design.md to ensure your design is compatible with the existing system.
+      With these files you can answer questions like:
+      - Is this changes only for a single service or does it affect multiple services?
+      - If there are multiple services, how do they named, communicate and what are the dependencies?
+      - Are there existing patterns for this type of change?
 
       Prior decisions (read existing ADRs first):
 
@@ -152,6 +163,11 @@ artifacts:
       flag it under Open Questions and let the adr step record a new
       superseding ADR.
 
+      Existing code patterns:
+      Before writing code examples, check existing code patterns from code-graph.
+      Graphs located in <repo>/graph/<service-name>.
+      You can know service name by reading context files.
+      If the change affects multiple services, check each service's graph.
 
       Sections:
 
@@ -171,6 +187,8 @@ artifacts:
       Include any in-force ADRs that this design suggests revisiting — the
       adr step will record the supersession.
 
+      If your decisions contain new cross-service integration.
+      You must describe technical details (for example, API contract, data mode, message validation schema, kafka topic etc.)
 
       Focus on architecture and approach, not line-by-line implementation.
 

@@ -1,19 +1,22 @@
-## Context
+## Контекст
 
-<!-- Background and current state -->
+<!-- Текущее состояние и предыстория -->
 
-## Goals / Non-Goals
+## Цели / Нецелевое
 
-**Goals:**
-<!-- What this design aims to achieve -->
+**Цели:**
+<!-- Чего должен достичь этот дизайн -->
 
-**Non-Goals:**
-<!-- What is explicitly out of scope -->
+**ЗА РАМКАМИ:**
+<!-- Что явно выходит за рамки -->
 
-## Decisions
+## Решения
 
-<!-- Key design decisions and rationale -->
+<!-- 
+    Ключевые дизайн-решения и их обоснование
+    API-контракты, форматы сообщений, схема данных и другие детали, если это необходимо
+    -->
 
-## Risks / Trade-offs
+## Риски / Компромиссы
 
-<!-- Known risks and trade-offs -->
+<!-- Известные риски и компромиссы -->
