@@ -164,7 +164,7 @@ artifacts:
       superseding ADR.
 
       Existing code patterns:
-      
+
       Before writing code examples, check existing code patterns from code-graph.
       Graphs located in <repo>/graph/<service-name>.
       You can know service name by reading context files.
@@ -282,12 +282,13 @@ artifacts:
     instruction: >
       Create the task list that breaks down the implementation work.
 
+      First of all, you need to read design.md file. In this file H3 header -- service name.
+      You need to create a task file for each service separately in `openspec/tasks/`.
 
       **IMPORTANT: Follow the template below exactly.** The apply phase parses
 
       checkbox format to track progress. Tasks not using `- [ ]` won't be
       tracked.
-
 
       Guidelines:
 
@@ -306,7 +307,6 @@ artifacts:
 
       ## 1. Setup
 
-
       - [ ] 1.1 Create new module structure
 
       - [ ] 1.2 Add dependencies to package.json
@@ -314,13 +314,11 @@ artifacts:
 
       ## 2. Core Implementation
 
-
       - [ ] 2.1 Implement data export function
 
       - [ ] 2.2 Add CSV formatting utilities
 
       ```
-
 
       Reference specs for what to build, design for how to build it, and
       <repo>/adr/ for the durable architectural commitments to honor.
