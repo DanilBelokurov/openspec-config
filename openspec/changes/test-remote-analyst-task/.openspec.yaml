@@ -1,0 +1,5 @@
+schema: spec-driven-with-adr
+stage: proposal
+title: "Тестовая remote-задача для аналитика"
+jiraUrl: https://jira.example.com/browse/TEST-REMOTE-1
+created: 2026-10-04
